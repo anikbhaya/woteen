@@ -1,0 +1,384 @@
+:root{
+    --primary-color: #ffa200;
+    --secondary-color: #01b2ec;
+    --red-color: #dd0041;
+    --light-color: #f5f5f5;
+    --dark-color: #2b283a;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: all .2s ease-in-out;
+}
+
+p{
+    font-size: .9rem;
+    line-height: 1.3rem;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+/* Utility Classes */
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1.5rem;
+    height: 100%;
+}
+
+.bg-primary{background: var(--primary-color);}
+.bg-secondary{background: var(--secondary-color);}
+.bg-red{background: var(--red-color);}
+.bg-light{background: var(--light-color);}
+.bg-dark{background: var(--dark-color);}
+
+.clr-primary{color: var(--primary-color);}
+.clr-secondary{color: var(--secondary-color);}
+.clr-red{color: var(--red-color);}
+.clr-light{color: var(--light-color);}
+.clr-dark{color: var(--dark-color);}
+
+.py-1{padding: .5rem 0;}
+.py-2{padding: 1rem 0;}
+.py-3{padding: 2rem 0;}
+.py-4{padding: 3rem 0;}
+.py-5{padding: 4rem 0;}
+
+.p-1{padding: .5rem;}
+.p-2{padding: 1rem;}
+.p-3{padding: 2rem;}
+.p-4{padding: 3rem;}
+
+.my-1{margin: .5rem 0;}
+.my-2{margin: 1rem 0;}
+.my-3{margin: 2rem 0;}
+.my-4{margin: 3rem 0;}
+.my-5{margin: 4rem 0;}
+
+.fw-thin{font-weight: 400;}
+.fw-medium{font-weight: 500;}
+.fw-bold{font-weight: 700;}
+
+.lh-1{
+    line-height: 1rem;
+}
+
+
+.btn{
+    color: #fff;
+    background: var(--dark-color);
+    font-weight: bold;
+    font-size: .8rem;
+    padding: .7rem 1.4rem;
+    border-radius: 7px;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+}
+
+.btn:hover{
+    background-color: var(--red-color);
+}
+
+.btn-primary{background-color: var(--primary-color);}
+.btn-secondary{background-color: var(--secondary-color);}
+
+.l-heading{
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+.m-heading{
+    font-size: 2rem;
+    padding: .5rem 0;
+}
+
+.lead{
+    font-size: 1.2rem;
+}
+
+
+/* Navigation */
+
+#navbar{
+    background-color: var(--light-color);
+    padding: .7rem 0;
+}
+
+#navbar .container{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar .container > div:last-child{
+    justify-self: end;
+}
+
+#navbar .container .logo{
+    justify-self: start;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.nav li{
+    margin: 0 .5rem;
+    padding: .5rem;
+}
+
+.nav li a{
+    font-weight: 600;
+}
+
+.nav li a:hover{
+    color: var(--secondary-color);
+}
+
+.current {
+    color: var(--secondary-color);
+}
+
+.logo img{
+    width: 150px;
+}
+
+
+/* Header */
+
+#header{
+    background: url("img/v1-1.jpg") no-repeat center center/cover;
+    height: 600px
+}
+
+
+#header .showcase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+#header .l-heading{
+    width: 50%
+}
+
+
+/* Feature */
+
+#feature{
+    background-color: var(--red-color);
+    color: #fff
+}
+
+#feature .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.feature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature i{
+    margin-right: 1rem;
+}
+
+
+/* Discover More */
+#discover .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+}
+
+#discover .btn{
+    margin-top: 2.5rem; 
+}
+
+.discover-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-gap: 1rem;
+}
+
+.discover-img img:nth-child(2){
+    grid-row: 1 /span 2;
+    grid-column: 2 /span 2;
+}
+
+.discover-img img:hover{
+    transform: scale(1.05);
+}
+
+.discover-img img{
+    border-radius: 10px;
+    transition: all .3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+
+/* Deals */
+
+#deals {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+}
+
+
+#deals .img{
+    background: url("img/super-sale.jpg") no-repeat center center/cover;
+}
+#deals .content{
+    margin-left: 1rem;
+}
+
+#deals hr{
+    width: 70%;
+    margin: 2rem 0;
+}
+
+#deals .clr-light li{
+    display: flex
+}
+
+#deals .clr-light i{
+    margin-right: .5rem;
+}
+
+#deals .circle{
+    width: 6.5rem;
+    height: 6.5rem;
+    background: rgba(255, 255, 255, 0.137);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    animation: circle 5s ease-in-out infinite;
+    justify-self: center;
+}
+
+@keyframes circle{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#deals .circle p{
+    width: 5rem;
+    height: 5rem;
+    padding: 1rem;
+    background: var(--red-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 1rem;
+}
+
+
+/* Packages */
+
+#packages{
+    text-align: center;
+    background: var(--light-color);
+}
+
+.icon{
+    display: flex;
+}
+
+.icon i{
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f3f3f3;
+    border-radius: 50%;
+    margin: 0 .5rem;
+}
+
+.package-chart{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 4rem;
+}
+
+.ind-pkg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #fff;
+    padding: 2rem 3rem;
+
+}
+
+
+/* Switching */
+
+#switching{
+    background: url('img/slogan-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    position: relative;
+}
+
+#switching:before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--red-color);
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+}
+
+#switching .container{
+    z-index: 1;
+    position: relative;
+}
+
+
+/* Footer */
+
+#footer{
+    text-align: center;
+}
