@@ -41,7 +41,7 @@ img{
 .container{
     max-width: 1200px;
     margin: auto;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     height: 100%;
 }
 
@@ -109,6 +109,7 @@ img{
 .m-heading{
     font-size: 2rem;
     padding: .5rem 0;
+    line-height: 2rem;
 }
 
 .lead{
@@ -381,4 +382,50 @@ img{
 
 #footer{
     text-align: center;
+}
+
+
+/* Media Query */
+@media only screen and (max-width: 1024px) {
+    #navbar .container{
+        grid-template-columns: 1fr 1fr;
+    }
+    #navbar .nav{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px){
+    .package-chart{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px){
+    .l-heading{
+        font-size: 2rem;
+    }
+    #header .l-heading{
+        width: 100%;
+    }
+    .package-chart{
+        grid-template-columns: 1fr;
+    }
+    #feature .container{
+        grid-template-columns: 1fr;
+    }
+    .feature{
+        margin: 10px 0;
+    }
+    #discover .container{
+        grid-template-columns: 1fr;
+    }
+
+    #deals .img{
+        display: none;
+    }
+    #deals .circle{
+        top: 200px;
+        right: 0;
+    }
 }
